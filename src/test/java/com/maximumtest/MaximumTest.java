@@ -48,4 +48,25 @@ public class MaximumTest {
         Double result = maximumTest.findMaximum(doulbeArray);
         Assertions.assertEquals(Double.valueOf(7.6), result);
     }
+    @Test
+    public void whenGivenThreeStrings_AndFirstStringIsMax_ShouldReturn_true() {
+        String [] stringArray = {"Banana", "Apple", "Peach"};
+        String result = maximumTest.findMaximum(stringArray);
+        Assertions.assertEquals("Banana",result);
+    }
+
+    @Test
+    public void whenGivenThreeStrings_AndSecondStringIsMax_ShouldReturn_true() {
+        String [] stringArray = {"Peach", "apple", "Banana"};
+        String result = maximumTest.findMaximum(stringArray);
+        Assertions.assertEquals("apple",result);
+    }
+
+
+    @Test
+    public void whenGivenThreeStrings_AndThirdStringIsMax_ShouldReturn_true() {
+        String [] stringArray = {"Banana", "Apple", "Peach"};
+        String result = maximumTest.findMaximum(stringArray);
+        Assertions.assertEquals("Peach",result);
+    }
 }
