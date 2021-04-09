@@ -27,4 +27,25 @@ public class MaximumTest {
         Integer result = maximumTest.findMaximum(intArray);
         Assertions.assertEquals(Integer.valueOf(7), result);
     }
+    @Test
+    public void whenGivenThreeDoubleNumbers_AndFirstNumberIsMax_ShouldReturn_true() {
+        Double [] doulbeArray = {5.8, 1.2, 3.4};
+        Double result = maximumTest.findMaximum(doulbeArray);
+        Assertions.assertEquals(Double.valueOf(5.8), result);
+    }
+
+    @Test
+    public void whenGivenThreeDoubleNumbers_AndSecondNumberIsMax_ShouldReturn_true() {
+        Double [] doulbeArray = {5.2, 8.9, 2.1};
+        Double result = maximumTest.findMaximum(doulbeArray);
+        Assertions.assertEquals(Double.valueOf(8.9), result);
+    }
+
+
+    @Test
+    public void whenGivenThreeDoubleNumbers_AndThirdNumberIsMax_ShouldReturn_true() {
+        Double [] doulbeArray = {5.9, 2.1, 7.6};
+        Double result = maximumTest.findMaximum(doulbeArray);
+        Assertions.assertEquals(Double.valueOf(7.6), result);
+    }
 }
