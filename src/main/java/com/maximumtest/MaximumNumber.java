@@ -7,28 +7,38 @@ package com.maximumtest;
  */
 public class MaximumNumber<K extends Comparable<K>> {
 
-    private final K x;
-    private final K z;
-    private final K y;
+    private final K p;
+    private final K q;
+    private final K r;
+    private final K s;
+    private final K t;
 
-    public MaximumNumber(K x, K y, K z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
+    public MaximumNumber(K p, K q, K r, K s, K t) {
+        this.p = p;
+        this.q = q;
+        this.r = r;
+        this.s = s;
+        this.t = t;
     }
 
     public K findMaximum() {
-        return MaximumNumber.findMaximum(x, y, z);
+        return MaximumNumber.findMaximum(p, q, r, s, t);
     }
 
     //Single generic method to compare different types of data
-    public static <K extends Comparable> K findMaximum(K x, K y, K z) {
-        K max = x;
-        if (y.compareTo(max) > 0) {
-            max = y;
+    public static <K extends Comparable> K findMaximum(K p, K q, K r, K s,K t) {
+        K max = p;
+        if (q.compareTo(max) > 0) {
+            max = q;
         }
-        if (z.compareTo(max) > 0) {
-            max = z;
+        if (r.compareTo(max) > 0) {
+            max = r;
+        }
+        if (s.compareTo(max) > 0) {
+            max = s;
+        }
+        if (t.compareTo(max) > 0) {
+            max = t;
         }
         return max;
     }
