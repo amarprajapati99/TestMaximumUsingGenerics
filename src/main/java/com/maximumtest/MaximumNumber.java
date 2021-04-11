@@ -22,7 +22,13 @@ public class MaximumNumber<K extends Comparable<K>> {
     }
 
     public K findMaximum() {
-        return MaximumNumber.findMaximum(p, q, r, s, t);
+        K findMax = MaximumNumber.findMaximum(p, q, r, s, t);
+        printMax(findMaximum());
+        return findMaximum();
+    }
+
+    private void printMax(K maximum) {
+        System.out.println("Maximum:" + maximum);
     }
 
     //Single generic method to compare different types of data
